@@ -1,6 +1,6 @@
 # pre-build stage
 FROM ruby:3.1.3-alpine3.16 AS pre-builder
-
+ENV RUTVIJ=test
 # ARG default to production settings
 # For development docker-compose file overrides ARGS
 ARG BUNDLE_WITHOUT="development:test"
