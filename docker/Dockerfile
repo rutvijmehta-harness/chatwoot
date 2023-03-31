@@ -1,7 +1,7 @@
 # pre-build stage
 FROM ruby:3.1.3-alpine3.16 AS pre-builder
 
-ENV RUTVIJ=test
+ENV RUTVIJ=test21
 
 # ARG default to production settings
 # For development docker-compose file overrides ARGS
@@ -51,7 +51,7 @@ COPY package.json yarn.lock ./
 RUN yarn install
 
 COPY . /app
-ENV RUTVIJ=test2
+ENV RUTVIJ=test212
 # creating a log directory so that image wont fail when RAILS_LOG_TO_STDOUT is false
 # https://github.com/chatwoot/chatwoot/issues/701
 RUN mkdir -p /app/log
@@ -86,7 +86,7 @@ ENV BUNDLE_FORCE_RUBY_PLATFORM ${BUNDLE_FORCE_RUBY_PLATFORM}
 ARG RAILS_ENV=production
 ENV RAILS_ENV ${RAILS_ENV}
 ENV BUNDLE_PATH="/gems"
-ENV RUTVIJ=test3
+ENV RUTVIJ=test213
 RUN apk add --no-cache \
     openssl \
     tzdata \
