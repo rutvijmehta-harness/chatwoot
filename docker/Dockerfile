@@ -86,7 +86,7 @@ ENV BUNDLE_FORCE_RUBY_PLATFORM ${BUNDLE_FORCE_RUBY_PLATFORM}
 ARG RAILS_ENV=production
 ENV RAILS_ENV ${RAILS_ENV}
 ENV BUNDLE_PATH="/gems"
-ENV RUTVIJ=test3
+ENV RUTVIJ=test3-pr-depot-s3-partial-8-1
 RUN apk add --no-cache \
     openssl \
     tzdata \
