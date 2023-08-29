@@ -61,7 +61,7 @@ RUN if [ "$RAILS_ENV" = "production" ]; then \
   fi
 
 # Generate .git_sha file with current commit hash
-RUN git rev-parse HEAD > /app/.git_sha
+RUN echo "randomsha" > /app/.git_sha
 
 # Remove unnecessary files
 RUN rm -rf /gems/ruby/3.2.0/cache/*.gem \
