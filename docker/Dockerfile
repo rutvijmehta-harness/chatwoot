@@ -50,7 +50,6 @@ RUN yarn install
 
 COPY . /app
 
-RUN git config --global --add safe.directory /app
 # creating a log directory so that image wont fail when RAILS_LOG_TO_STDOUT is false
 # https://github.com/chatwoot/chatwoot/issues/701
 RUN mkdir -p /app/log
